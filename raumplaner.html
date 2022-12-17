@@ -52,10 +52,24 @@
             <input type="submit" id="apply" value="Anwenden" />
           </form>
         </div>
+        <div>
+          <h2>Möbel Maße</h2>
+          <form class="variable-werte">
+            <div>
+              <label for="breite">Breite <span>(meter)</span></label>
+              <input class="mess-wert" type="number" step="0.1" max="24" required id="breite" name="raum_breite" value="1.5m">
+            </div>
+            <div>
+              <label for="hoehe">Höhe <span>(meter)</span></label>
+              <input class="mess-wert" type="number" step="0.1" max="18" required id="hoehe" name="raum_hoehe" value="2m">
+            </div>
+            <input type="submit" id="apply" value="Anwenden">
+          </form>
+        </div>
       </aside>
 
       <section id="raum-bearbeitung">
-        <div id="resizeMe" draggable="true">
+        <div id="resizeMe" class="resizeMe" draggable="true">
           <div class="resizable">
             <p id="raum-width">10m</p>
             <p id="raum-height">10m</p>
@@ -77,12 +91,16 @@
 
         <h2>Möbel Stücke</h2>
         <div id="imagesBar" class="moebel-stuecke">
-          <img
-            src="./img/dlf.pt-bed-top-view-png-5796898.png"
-            draggable="true"
-            alt=""
-          />
-          <img src="./img/pngwing.com.png" draggable="true" alt="" />
+          <div class="resize-image" draggable="true">
+            <img src="./img/dlf.pt-bed-top-view-png-5796898.png" alt="">
+            <p class="raum-width">10m</p>
+            <p class="raum-height">10m</p>
+          </div>
+          <div class="resize-image" draggable="true">
+            <img src="./img/pngwing.com.png" alt="">
+            <p class="raum-width">10m</p>
+            <p class="raum-height">10m</p>
+          </div>
         </div>
       </aside>
     </main>
